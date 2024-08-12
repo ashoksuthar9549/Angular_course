@@ -1,0 +1,10 @@
+<span>
+    <ng-content />
+</span>
+<span class="icon">
+    <!-- select => used as selector , and access using ngProjectAs="icon" -->
+    <ng-content select="icon">
+        <!-- used as fallback(when no icon is provided) -->
+        → 
+    </ng-content>
+</span>

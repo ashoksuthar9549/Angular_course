@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    @for (ticket of tickets; track ticket.id) {
+      <app-ticket [data]="ticket" (close)="onCloseTicket(ticket.id)"/> <!-- {{$even, $odd, $first, $last}} => there are additional variables available in the template that can be used to determine the index and other properties of the current ticket in the iteration. -->
+    } @empty{
+      <p>No tickets available.</p>
+    }
+  </ul>
+</div>
+
+<div id="new-ticket">
+  <app-new-ticket (add)="onAdd($event)"/>
+</div>
